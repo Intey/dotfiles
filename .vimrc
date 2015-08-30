@@ -1,29 +1,9 @@
-set nocompatible
-
-filetype off 
-set rtp=~/.vim/bundle/vim_lib
-call vim_lib#sys#Autoload#init('~/.vim', 'bundle')
-
-source ~/.vundles.vim "plugins with Vundle.
-" 
-Plugin 'vim_lib'
-Plugin 'vim_start'
-" Plugin 'vim_plugmanager'
-" 
-" 
-Plugin 'vim_grep'
-Plugin 'vim_git'
-" 
-Plugin 'vim_prj'
-Plugin 'vim_template'
-" 
-let g:clighter_autostart=1
-
-" Plugin 'vimgdb'
-" Plugin 'ProtoDef'
-" Plugin 'FSwitch'
-" 
-filetype indent plugin on
+if has('vim_starting')
+  if &compatible 
+    set nocompatible
+  endif
+" plugins with NeoBundle.
+source ~/.vundles.vim 
 
 colorscheme codeschool
 
@@ -38,7 +18,7 @@ set ignorecase
 set nowrap
 "set smartcase
 set guioptions=
-set guifont=Meslo\ LG\ L
+set guifont=Meslo\ LG\ L\ 12
 set wildmode=longest:list,full
 set history=100
 set guiheadroom=0 "fix gaps
@@ -111,7 +91,7 @@ nmap <S-F4> :vertical wincmd f<CR>
 
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 "easy russian input
-set keymap=russian-jcukenwin
+" set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
@@ -145,6 +125,7 @@ augroup END
 nmap <silent> <Leader>oL :FSSplitRight<cr>
 nmap <silent> <Leader>of :FSHere<cr>
 
+nnoremap <leader>f :<C-u>Unite -buffer-name=files -start-insert buffer file_rec/async:!<cr>
 "unite
 let g:unite_enable_start_insert=1
 let g:unite_split_rule="botright"
@@ -166,41 +147,11 @@ augroup VimFiles
     autocmd FileType vim set tw=80
 augroup END
 
-"syntastic
-" let g:syntastic_enable_signs = 1
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-"haskell
 " let g:tabular_loaded = 1
-"au Bufenter *.hs compiler ghc
-" let g:haddock_browser="/usr/bin/chromium"
-" let g:ghc="/usr/bin/ghc"
 
-"f! Cabal_build()
-"    if g:cabal_dir = ""
-"        return;
-"    else
-"        "like:: exec "!cabal" + expand(cabal_dir, ":p:h")
-"endf
-"com cabal_b call Cabal_build()
-"
-"f! Init_cabal()
-"    let g:cabal_dir = getcwd()
-"endf
-"
-"f! Close_cabal()
-"    let g:cabal_dir = ""
-"endf
-"
-"au BufEnter *.cabal Init_cabal()
-"au BufLeave *.cabal Close_cabal()
-" let g:haskell_indent_if = 0
 " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
 
+let g:cmake_build_directories=['build','../build']
+let g:clighter_autostart=1
 " let g:clighter_occurences_mode = 0 
 " let g:clighter_highlight_blacklist = ['clighterNamespaceRef', 'clighterFunctionDecl', 'clighterFieldDecl', 'clighterDeclRefExprCall', 'clighterMemberRefExprCall', 'clighterMemberRefExprVar', 'clighterNamespace', 'clighterNamespaceRef', 'cligherInclusionDirective', 'clighterVarDecl']

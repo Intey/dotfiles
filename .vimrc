@@ -2,8 +2,10 @@ if has('vim_starting')
   if &compatible 
     set nocompatible
   endif
-" plugins with NeoBundle.
-source ~/.vundles.vim 
+endif
+
+"plugins with NeoBundle.
+source ~/.vim/.plugins.vim
 
 colorscheme codeschool
 
@@ -112,15 +114,15 @@ map <F1> :tab help
 "let OmniCpp_MayCompleteScope = 1 " autocomplete after ::
 "let OmniCpp_DefaultNamespaces = ["std", "_GLIBCXX_STD"]
 " automatically open and close the popup menu / preview window
-au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
+" au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
 set completeopt=menuone,menu,longest
 " maps and autocommand for FSwitch and protodef
 au! BufEnter *.cpp let b:fswitchdst = 'hpp,h' | let b:fswitchlocs = '.'
 au! BufEnter *.hpp let b:fswitchdst = 'cpp,h' | let b:fswitchlocs = '.'
 augroup NERDTree
-	autocmd!
-	autocmd FileType nerdtree set foldlevelstart=10
+  autocmd!
+  autocmd FileType nerdtree set foldlevelstart=10
 augroup END
 nmap <silent> <Leader>oL :FSSplitRight<cr>
 nmap <silent> <Leader>of :FSHere<cr>
@@ -135,23 +137,23 @@ let g:unite_candidate_icon = "▷"
 
 "fix for CSS names like vertical-align (vim-css3-syntax)
 augroup VimCSS3Syntax
-	autocmd!
-	autocmd FileType css setlocal iskeyword+=-
+  autocmd!
+  autocmd FileType css setlocal iskeyword+=-
 augroup END
 
 augroup VimFiles
-    autocmd!
-    autocmd FileType vim set sw=2
-    autocmd FileType vim set ts=2
-    autocmd FileType vim set cc=80
-    autocmd FileType vim set tw=80
+  autocmd!
+  autocmd FileType vim set sw=2
+  autocmd FileType vim set ts=2
+  autocmd FileType vim set cc=80
+  autocmd FileType vim set tw=80
 augroup END
 
 " let g:tabular_loaded = 1
 
 " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
 
-let g:cmake_build_directories=['build','../build']
-let g:clighter_autostart=1
+" let g:cmake_build_directories=['build','../build']
+" let g:clighter_autostart=1
 " let g:clighter_occurences_mode = 0 
 " let g:clighter_highlight_blacklist = ['clighterNamespaceRef', 'clighterFunctionDecl', 'clighterFieldDecl', 'clighterDeclRefExprCall', 'clighterMemberRefExprCall', 'clighterMemberRefExprVar', 'clighterNamespace', 'clighterNamespaceRef', 'cligherInclusionDirective', 'clighterVarDecl']

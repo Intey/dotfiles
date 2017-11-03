@@ -19,7 +19,15 @@ from os.path import join as pj
 batches = {
     'batch': {
         'labels': ['work'],
-        'files': ['.vimrc', '.vim/plugins.vim', '.vim/funcs.vim', '.zshrc', '.gitconfig']
+        'files': [
+            '.vimrc',
+            '.vim/plugins.vim',
+            '.vim/funcs.vim',
+            '.zshrc',
+            '.gitconfig',
+            '.config/awesome/rc.lua',
+            '.config/awesome/theme.lua',
+        ]
     },
     'ledge': {
         'labels': ['home'],

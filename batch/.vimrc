@@ -5,9 +5,10 @@ if has('vim_starting')
 endif
 
 "plugins with NeoBundle.
-source ~/.vim/.plugins.vim
+source ~/.vim/plugins.vim
 
-colorscheme codeschool
+colorscheme desert
+colorscheme gruvbox
 
 set synmaxcol=200
 "next two lines for cpp projects hack: in project directory, will apper 
@@ -20,7 +21,7 @@ set ignorecase
 set nowrap
 "set smartcase
 set guioptions=
-set guifont=Meslo\ LG\ L\ 12
+set guifont=DejaVu\ Sans\ Mono\ 11
 set wildmode=longest:list,full
 set history=100
 set guiheadroom=0 "fix gaps
@@ -33,10 +34,10 @@ set smartindent
 set expandtab
 set autoindent
 "set textwidth=111 "split 1 line longer then 111 to 2 lines.
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set colorcolumn=110
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set colorcolumn=80
 hi ColorColumn guibg=#151515
 hi ColorColumn ctermbg=darkgray
 set nu
@@ -63,10 +64,10 @@ let b:match_ignorecase=1
 let g:NERDTreeWinSize=30
 
 "rainbow_parentheses
-"au VimEnter * RainbowParenthesesToggle
-"au Syntax * RainbowParenthesesLoadRound
-"au Syntax * RainbowParenthesesLoadSquare
-"au Syntax * RainbowParenthesesLoadBraces
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 "disable autocomment next line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -116,7 +117,7 @@ map <F1> :tab help
 " automatically open and close the popup menu / preview window
 " au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-set completeopt=menuone,menu,longest
+set completeopt=longest,menuone
 " maps and autocommand for FSwitch and protodef
 au! BufEnter *.cpp let b:fswitchdst = 'hpp,h' | let b:fswitchlocs = '.'
 au! BufEnter *.hpp let b:fswitchdst = 'cpp,h' | let b:fswitchlocs = '.'
@@ -149,9 +150,20 @@ augroup VimFiles
   autocmd FileType vim set tw=80
 augroup END
 
+endtry
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<c-s>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+let g:UltiSnipsListSnippets="<c-l>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
 " let g:tabular_loaded = 1
 
-" let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_python_binary_path = '/usr/bin/python3'
 
 " let g:cmake_build_directories=['build','../build']
 " let g:clighter_autostart=1

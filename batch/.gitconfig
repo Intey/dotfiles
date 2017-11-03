@@ -1,0 +1,51 @@
+[alias]
+    st = status
+    co = checkout
+    ci = commit
+    ls = log --graph --oneline --decorate --color
+    cm = commit -m
+    last = commit --amend --no-edit
+    poh = push origin HEAD
+    df = diff --ignore-all-space
+	dc = diff --cached
+	mff = merge --ff-only
+    ski = stash --keep-index
+	ups = reset HEAD -p
+
+[user]
+    name = Churin Dmitry
+    email = churin@10205.ru
+[color]
+    diff = true
+    status = true
+[merge]
+	tool = gvimdiff
+
+[diff "pandoc"]
+    textconv = pandoc --to=docbook
+    promp = false
+    [alias]
+    wdiff = diff --word-diff=color
+    subadd = "!sh -c 'f() {\n\
+        target=$1\n\
+        url=$2\n\
+        branch=$3; test -z $branch && branch='master'\n\
+        git remote add -f $target $url\n\
+        git subtree add --squash -P 3rdparty/$target $target/$branch\n\
+        }; f' -"
+
+    subupd = "!f() {\n\
+        target=$1\n\
+        branch=$2; test -z $branch && branch='master'\n\
+        echo \"git fetch $target $branch\"\n\
+        git fetch $target $branch\n\
+        echo \"git subtree merge -P 3rdparty/$target $target/$branch\"\n\
+        git subtree merge -P 3rdparty/$target $target/$branch\n\
+        }; f"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[diff]
+	submodule = diff

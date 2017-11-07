@@ -117,7 +117,7 @@ map <F1> :tab help
 " automatically open and close the popup menu / preview window
 " au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
-set completeopt=longest,menuone
+set completeopt=longest,menuone,preview
 " maps and autocommand for FSwitch and protodef
 au! BufEnter *.cpp let b:fswitchdst = 'hpp,h' | let b:fswitchlocs = '.'
 au! BufEnter *.hpp let b:fswitchdst = 'cpp,h' | let b:fswitchlocs = '.'

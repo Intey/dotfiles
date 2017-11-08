@@ -56,3 +56,4 @@ autoload -U compinit && compinit -u
 
 # zsh highlighting
 [[ -s "/usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]] && source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[[ -s ~/.aliases.sh ]] && source ~/.aliases.sh

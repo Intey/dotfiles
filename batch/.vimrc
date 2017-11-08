@@ -21,7 +21,8 @@ set ignorecase
 set nowrap
 "set smartcase
 set guioptions=
-set guifont=DejaVu\ Sans\ Mono\ 11
+" set guifont=DejaVu\ Sans\ Mono\ 11
+set guifont=mononoki\ 12
 set wildmode=longest:list,full
 set history=100
 set guiheadroom=0 "fix gaps
@@ -95,6 +96,7 @@ nmap <S-F4> :vertical wincmd f<CR>
 nnoremap <Leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 "easy russian input
 " set keymap=russian-jcukenwin
+set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
 highlight lCursor guifg=NONE guibg=Cyan
@@ -117,6 +119,7 @@ map <F1> :tab help
 " automatically open and close the popup menu / preview window
 " au CursorMovedI,InsertLeave * if pumvisible() == 0|silent! pclose|endif
 "au BufNewFile,BufRead,BufEnter *.cpp,*.hpp set omnifunc=omni#cpp#complete#Main
+" preview - for python show help for selected
 set completeopt=longest,menuone,preview
 " maps and autocommand for FSwitch and protodef
 au! BufEnter *.cpp let b:fswitchdst = 'hpp,h' | let b:fswitchlocs = '.'
@@ -150,7 +153,6 @@ augroup VimFiles
   autocmd FileType vim set tw=80
 augroup END
 
-endtry
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"

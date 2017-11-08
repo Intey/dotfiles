@@ -11,6 +11,10 @@ batches = {
             '~/.gitconfig',
             '~/.config/awesome/rc.lua',
             '~/.config/awesome/theme.lua',
+            '~/.xmodmap',
+            '~/.keyboard',
+            '~/.screen-duplicate',
+            '~/.screen-resolution',
         ]
     },
     'ledge': {

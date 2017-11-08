@@ -9,8 +9,6 @@ NeoBundle 'Tagbar'
 NeoBundle 'SirVer/ultisnips'
 NeoBundle 'honza/vim-snippets'
 
-NeoBundle 'derekwyatt/vim-protodef'
-NeoBundle 'FSwitch'
 NeoBundle 'morhetz/gruvbox'
 
 "NeoBundle 'easytags.vim'
@@ -30,25 +28,22 @@ NeoBundle 'The-NERD-tree'
 NeoBundle 'paredit.vim'
 NeoBundle 'Tabular'
 NeoBundle 'mattn/emmet-vim'
-" NeoBundle 'node.js'
 NeoBundle 'xml.vim'
 
 "NeoBundle 'xsltassistant.vim'
 "NeoBundle 'xslhelper.vim'
 
 NeoBundle 'loremipsum'
-NeoBundle 'LimitWindowSize'
-NeoBundle 'rails.vim'
-NeoBundle 'vim-ruby/vim-ruby'
+" NeoBundle 'LimitWindowSize'
 NeoBundle 'bufexplorer.zip'
 NeoBundle 'rainbow_parentheses.vim'
-"Code analizer for JS
-"NeoBundle 'marijnh/tern_for_vim'
-NeoBundle 'ProtoDef'
 
 
 " ================= CPP ==============
 " NeoBundle 'KabbAmine/vCoolor.vim'
+NeoBundle 'derekwyatt/vim-protodef'
+NeoBundle 'FSwitch'
+NeoBundle 'ProtoDef'
 NeoBundle 'Valloric/YouCompleteMe' 
 " NeoBundle 'rdnetto/YCM-Generator' " installed with AUR
 " NeoBundleLazy 'jeaye/color_coded', {
@@ -66,8 +61,8 @@ NeoBundle 'Valloric/YouCompleteMe'
 " ================= PYTHON ==============
 " Also use Ycm
 " NeoBundle 'davidhalter/jedi-vim' "not complete curses window
- "NeoBundle 'Python-mode-klen'
- NeoBundle 'python-mode'
+" NeoBundle 'Python-mode-klen'
+" NeoBundle 'python-mode'
 
 " ================= WEB MAIN ==============
 " NeoBundle 'Haml'
@@ -75,11 +70,17 @@ NeoBundle 'Valloric/YouCompleteMe'
 " NeoBundle 'groenewege/vim-less'
 " NeoBundle 'Sass'
  " =============== JavaScript ===========
- NeoBundle 'vim-jade'
- NeoBundle 'vim-javascript'
- NeoBundle 'vim-jsdoc'
- NeoBundle 'vim-jsx'
- NeoBundle 'vim-less'
+" NeoBundle 'node.js'
+"Code analizer for JS
+"NeoBundle 'marijnh/tern_for_vim'
+ NeoBundleLazy 'vim-jade'
+ NeoBundleLazy 'vim-javascript'
+ NeoBundleLazy 'vim-jsdoc'
+ NeoBundleLazy 'vim-jsx'
+ NeoBundleLazy 'vim-less'
+
+autocmd FileType jsx NeoBundleSource vim-jsx
+autocmd FileType js,jsx NeoBundleSource vim-jade,vim-javascript,vim-jsdoc
 
 
 call neobundle#end()

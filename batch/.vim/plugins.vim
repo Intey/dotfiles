@@ -74,13 +74,16 @@ NeoBundle 'Valloric/YouCompleteMe'
 "Code analizer for JS
 "NeoBundle 'marijnh/tern_for_vim'
  NeoBundleLazy 'vim-jade'
- NeoBundleLazy 'vim-javascript'
- NeoBundleLazy 'vim-jsdoc'
- NeoBundleLazy 'vim-jsx'
+ NeoBundle 'vim-javascript'
+ NeoBundle 'vim-jsdoc'
+ NeoBundle 'vim-jsx'
  NeoBundleLazy 'vim-less'
 
-autocmd FileType jsx NeoBundleSource vim-jsx
-autocmd FileType js,jsx NeoBundleSource vim-jade,vim-javascript,vim-jsdoc
+ NeoBundle 'aktl/plantuml-syntax'
+ NeoBundle 'scrooloose/vim-slumlord'
+
+" autocmd FileType jsx NeoBundleSource vim-jsx
+" autocmd FileType js,jsx NeoBundleSource vim-jade,vim-javascript,vim-jsdoc
 
 
 call neobundle#end()

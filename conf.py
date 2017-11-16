@@ -6,6 +6,7 @@ batches = {
             '~/.vimrc',
             '~/.vim/plugins.vim',
             '~/.vim/funcs.vim',
+            '~/.vim/commands.vim',
             '~/.zshrc',
             '~/.aliases.sh',
             '~/.gitconfig',

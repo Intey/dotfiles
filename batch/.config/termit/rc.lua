@@ -25,7 +25,7 @@ gruvbox = {
   clr.red,    -- diff error, state delete, untracked
   clr.bgreen,  -- diff add, correct command, 777 dir bg
   clr.yellow, -- pwd path
-  clr.black,  -- 777 dir foreground
+  clr.ligth,  -- 777 dir foreground, bash astericks expansion(zsh)
   '#000000',  -- ?
   '#FFFFFF',  --
   clr.light,  -- file, cmd param, default, foreground

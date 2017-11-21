@@ -17,7 +17,7 @@ batches = {
             '~/.keyboard',
             '~/.screen-duplicate',
             '~/.screen-resolution',
-
+            '~/scripts/asciidoctorfix.sh',
         ]
     },
     'ledge': {

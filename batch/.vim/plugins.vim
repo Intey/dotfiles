@@ -79,6 +79,7 @@ NeoBundle 'Valloric/YouCompleteMe'
  NeoBundle 'vim-jsx'
  NeoBundleLazy 'vim-less'
 
+ " ============== PlantUML ================
  NeoBundle 'aktl/plantuml-syntax'
  NeoBundle 'scrooloose/vim-slumlord'
 

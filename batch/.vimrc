@@ -154,12 +154,6 @@ augroup VimFiles
   autocmd FileType vim set tw=80
 augroup END
 
-" auto build html for preview
-augroup AsciiDoc
-  au!
-  au BufWritePost *.asciidoc silent !asciidoc -b html5 -o /tmp/index.html %
-augroup END
-
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-s>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"

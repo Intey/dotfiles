@@ -13,6 +13,7 @@ batches = {
             '~/.config/awesome/rc.lua',
             '~/.config/awesome/theme.lua',
             '~/.config/termit/rc.lua',
+            '~/.config/termit/gruvbox.lua',
             '~/.xmodmap',
             '~/.keyboard',
             '~/.screen-duplicate',

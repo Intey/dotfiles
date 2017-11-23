@@ -42,8 +42,8 @@ gruvbox2 = {
   _clr.bgreen,  -- diff add, correct command, 777 dir bg
   _clr.yellow,  -- pwd path
   _clr.ligth,   -- 777 dir foreground, bash astericks expansion(zsh)
-  '#FFFFFF',
-  '#FFFFFF',    --
+  _clr.blue,    --
+  _clr.purple,
   _clr.light,   -- file, cmd param, default, foreground
   _clr.light,   -- file, cmd param, default, foreground
   _clr.purple,  -- error input, git dirty

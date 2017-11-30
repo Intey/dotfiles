@@ -7,11 +7,9 @@ command! Preview :call Preview()
 
 
 augroup AsciiDoc
-  au!
-  au FileType asciidoc au BufWritePost <buffer> !asciidoctorfix % /tmp/index.html
+  au! FileType asciidoc au! BufWritePost <buffer> !asciidoctorfix % /tmp/index.html
 augroup END
 
 augroup PlantUML
-  au!
-  au FileType plantuml au BufWritePost <buffer> silent !plantuml -o /tmp -tpng %
+  au! FileType plantuml au! BufWritePost <buffer> silent !plantuml -o /tmp -tpng %
 augroup END

@@ -19,6 +19,7 @@ batches = {
             '~/.screen-duplicate',
             '~/.screen-resolution',
             '~/scripts/asciidoctorfix.sh',
+            '~/scripts/bundleit.sh',
             '~/.build.cfg',
         ]
     },

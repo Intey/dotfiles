@@ -41,4 +41,7 @@ if __name__ == "__main__":
             os.makedirs(d)
         src, dst = expanded, pj(node, flname)
         print("backup {} to {}".format(src, dst))
-        copyfile(src, dst)
+        if not os.path.exists(src):
+            print(f"{src} doesn't exists")
+        else:
+            copyfile(src, dst)

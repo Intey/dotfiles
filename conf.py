@@ -35,4 +35,17 @@ batches = {
             '~/.config/awesome/theme.lua',
         ]
     },
+    'nsbikes': {
+        'files': [
+            '~/.vimrc',
+            '~/.vundles.vim',
+            '~/.vim/funcs.vim',
+            '~/.zshrc',
+            '~/.gitconfig',
+            '~/.config/awesome/rc.lua',
+            '~/.config/awesome/theme.lua',
+            '~/.xmodmap',
+            '~/.keyboard',
+        ]
+    },
 }

@@ -1,0 +1,45 @@
+[user]
+	email = ziexe0@gmail.com
+	name = Intey
+[push]
+	default = simple
+[core]
+	editor = vim
+  fileMode =false
+	autocrlf = input
+	quotepath = false
+[alias]
+	co = checkout
+	cm = commit -m
+  ls = log --oneline --graph --decorate
+	amend = commit --amend
+  poh = push origin HEAD
+	last = commit --amend --no-edit
+	st = status -s
+	dc = diff --cached
+	deploy = push heroku master
+  rst = reset HEAD
+	df = diff --ignore-all-space
+  ignoreit = status -s | cut -d' ' -f 2 | xargs echo >> .gitignore
+	append = "!git add . && git last"
+
+[merge]
+	tool = gvimdiff
+[diff]
+	tool = gvimdiff
+[help]
+	autocorrect = 1
+[color]
+	ui = always
+[credential]
+	helper = store
+
+[diff "clj"]
+    xfuncname = "^(def.*)$"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[submodule]
+	recurse = true
